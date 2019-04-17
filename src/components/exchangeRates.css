@@ -1,0 +1,27 @@
+.rates {
+  display: flex;
+  border: 1px solid rgb(168, 168, 168);
+  flex-wrap: wrap;
+}
+
+.rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 83px;
+  max-width: 83px;
+  padding: 10px 5px;
+  margin: 10px;
+  border: 1px solid lightcoral;
+
+  & > span:nth-of-type(2) {
+    font-style: italic;
+  }
+}
+
+.rate:hover {
+  background: color-mod(lightcoral alpha(60%));
+  color: color-mod(black alpha(70%));
+  border-color: color-mod(black alpha(40%));
+}
