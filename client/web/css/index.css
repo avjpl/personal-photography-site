@@ -1,0 +1,13 @@
+@import './reset.css';
+@import './variables.css';
+@import './fonts.css';
+
+html,
+body {
+  height: 100%
+}
+
+body {
+  letter-spacing: 2.3px;
+  font-family: effra, arial;
+}

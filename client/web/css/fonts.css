@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'ClearSans';
+  src: url('../fonts/ClearSans-Regular.woff2') format('woff2');
+  /* Add other formats as you see fit */
+}
+
+@font-face {
+  font-family: 'effra';
+  src: url('../fonts/effra-regular.eot');
+  src: url('../fonts/effra-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/effra-regular.woff') format('woff'),
+        url('../fonts/effra-regular.ttf') format('truetype'),
+        url('../fonts/effra-regular.svg#effraregular') format('svg');
+}
+
+/* @font-face {
+  font-family: 'Clear Sans';
+  src: url('../fonts/ClearSans-Regular.woff2') format('woff2');
+} */
+
+/* @font-face {
+  font-family: 'Clear Sans Bold';
+  src: url('../fonts/ClearSans-Bold.woff2') format('woff2');
+} */

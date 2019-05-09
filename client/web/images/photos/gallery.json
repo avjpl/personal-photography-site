@@ -1,0 +1,43 @@
+{
+  "georgia.nicole.paxton": {
+    "full": [
+      "georgia_1.jpg",
+      "georgia_2.jpg",
+      "georgia_3.jpg"
+    ],
+    "thumb": [
+      "georgia_1_thumb.jpg",
+      "georgia_2_thumb.jpg",
+      "georgia_3_thumb.jpg"
+    ]
+  },
+  "kelly.hathaway": {
+    "full": [
+      "Kelly_1.jpg",
+      "Kelly_2.jpg",
+      "Kelly_3.jpg",
+      "Kelly_4.jpg",
+      "Kelly_5.jpg",
+      "Kelly_6.jpg"
+    ]
+  },
+  "sorcha": {
+    "full": [
+      "Sorcha_1.jpg",
+      "Sorcha_2.jpg"
+    ],
+    "thumb": [
+      "Sorcha_1_thumb.jpg"
+    ]
+  },
+  "tayszea": {
+    "full": [
+      "tayszea_1.jpg",
+      "tayszea_2.jpg"
+    ],
+    "thumb": [
+      "tayszea_1_thumb.jpg",
+      "tayszea_2_thumb.jpg"
+    ]
+  }
+}

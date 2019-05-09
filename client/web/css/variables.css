@@ -1,0 +1,23 @@
+:root {
+  --color-black: rgb(0, 0, 0);
+
+  --spacer10: 10px;
+  --spacer20: 20px;
+
+  /* colours */
+  --white: #fff;
+  --black: #000;
+  --off-white: #f0f0f0;
+  --gray: #131313;
+  --light-gray: #959595;
+  --dark-gray: #222222;
+  /*
+    #f6f6f6
+    #959595
+    #939393
+  */
+
+  /**/
+  --bgColor: var(--black);
+  --containerBgColour: var(--gray);
+}
