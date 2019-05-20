@@ -1,5 +1,5 @@
 import '@babel/polyfill';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import Splash from './components/Splash';
 

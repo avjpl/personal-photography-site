@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import Isotope from 'isotope-layout';
 // import { Link } from 'react-router-dom';
 
@@ -53,7 +53,7 @@ class Gallery extends Component {
         name: 'test7',
         imageUrl: 'https://picsum.photos/150/150/?blur'
       },
-    ]
+    ];
   }
 
   componentDidMount() {
@@ -65,17 +65,17 @@ class Gallery extends Component {
 
   render() {
     return (
-      <Fragment>
+      <>
         <h1>Gallery</h1>
         <ItemGrid>
           {this.data.map((object) => {
             return <Item
               key={object.id}
               name={object.name}
-              imageUrl={object.imageUrl} />
+              imageUrl={object.imageUrl} />;
           })}
         </ItemGrid>
-      </Fragment>
+      </>
     );
   }
 }

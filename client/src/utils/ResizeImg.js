@@ -26,7 +26,7 @@ const resizeImage = async () => {
         exif: exifData,
       },
       metadata,
-    }
+    };
   }));
 };
 
@@ -55,11 +55,11 @@ const exif = (image) => {
         if (e) {
           reject(e.message);
         } else {
-          reolve(exifData)
+          reolve(exifData);
         }
       });
     } catch (e) {
       reject(e.message);
     }
   });
-}
+};

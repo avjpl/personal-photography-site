@@ -14,7 +14,7 @@ class ItemGrid extends Component {
       <div className="item-grid">
         {this.props.children}
       </div>
-    )
+    );
   }
 
   // set up isotope

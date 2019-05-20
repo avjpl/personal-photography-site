@@ -1,35 +1,39 @@
-import React, { Component } from 'react';
+import React from 'react';
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
 
 import Screen from './Screen';
 
 import styles from './Gallery.css';
 
-const data = require('../../web/images/photos/gallery');
-const galleryBase = 'web/images/photos';
-
-class Gallery extends Component {
-  constructor(props) {
-    super(props);
+const GET_ALL_PHOTOS = gql`
+  query getAllThumbnailPhoto($size: String) {
+    getAllPhotos(size: $size) {
+      id
+      file
+    }
   }
+`;
 
-  render() {
-    return (
-      <Screen>
-        <div className={`${styles.content} photos`}>
+const Gallery = () => {
+  return (
+    <Screen>
+      <div className={`${styles.content} photos`}>
+        <Query query={GET_ALL_PHOTOS} variables={{ size: 'SMALL' }}>
           {
-            Object.keys(data).map(model => {
-              if (data[model]['thumb']) {
-                return data[model]['thumb'].map(image => {
-                  console.log(image);
-                  return <img src={`${galleryBase}/${model}/${image}`} />
-                })
-              }}
-            )
+            ({ loading, error, data: { getAllPhotos } }) => {
+              if (loading) return <p>Loading...</p>;
+              if (error) return <p>Error :(</p>;
+
+              return (
+                getAllPhotos.map(({ id, file }) => <img key={id} src={`${file}`} />)
+              );
+            }
           }
-        </div>
-      </Screen>
-    );
-  }
+        </Query>
+      </div>
+    </Screen>
+  );
 }
 
 export default Gallery;

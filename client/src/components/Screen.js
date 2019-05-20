@@ -1,8 +1,8 @@
-import React, { Fragment } from 'React';
+import React from 'React';
 import { Link } from 'react-router-dom';
 
 const Screen = ({ children }) => (
-  <Fragment>
+  <>
     <header>
       <span>Avjpl</span>
       <nav>
@@ -37,7 +37,7 @@ const Screen = ({ children }) => (
       </nav>
 
     </footer>
-  </Fragment>
+  </>
 );
 
 export default Screen;

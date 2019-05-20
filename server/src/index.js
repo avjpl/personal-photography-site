@@ -4,12 +4,12 @@ const { merge } = require('lodash');
 const dataSources = require('./dataSources');
 
 const { Query } = require('./types/query.js');
-const { Test, testResolvers } = require('./types/test.js');
 const { Photos, photosResolvers } = require('./types/photos.js');
+const { Post, postResolvers } = require('./types/post.js');
 
 const server = new ApolloServer({
-  typeDefs: [Query, Photos, Test],
-  resolvers: [merge(photosResolvers, testResolvers)],
+  typeDefs: [Query, Photos, Post],
+  resolvers: [merge(photosResolvers, postResolvers)],
   dataSources
 });
 

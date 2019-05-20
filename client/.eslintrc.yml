@@ -17,6 +17,7 @@ parserOptions:
   sourceType: module
 plugins:
   - react
+  - react-hooks
 rules:
   indent:
     - error
@@ -30,3 +31,7 @@ rules:
   semi:
     - error
     - always
+  react-hooks/rules-of-hooks:
+    - error
+  react-hooks/exhaustive-deps:
+    - warn

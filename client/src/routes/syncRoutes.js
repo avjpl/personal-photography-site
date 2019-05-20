@@ -2,6 +2,7 @@ import Splash from '../components/Splash';
 import Home from '../components/Home';
 import Gallery from '../components/Gallery';
 import Blog from '../components/Blog';
+import Post from '../components/Post';
 import ContactMe from '../components/Contact';
 
 export const routes = [
@@ -13,21 +14,26 @@ export const routes = [
   {
     component: Home,
     path: '/home',
-    exact: true,
+    // exact: true,
   },
   {
     component: Gallery,
     path: '/gallery',
-    exact: true,
+    // exact: true,
   },
   {
     component: Blog,
     path: '/blog',
-    exact: true,
+    // exact: true,
+  },
+  {
+    component: Post,
+    path: '/post/:slug',
+    // exact: true,
   },
   {
     component: ContactMe,
     path: '/contact',
-    exact: true,
+    // exact: true,
   }
 ];

@@ -1,3 +1,4 @@
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 exports.devServer = ({ host, port } = {}) => ({
@@ -6,8 +7,10 @@ exports.devServer = ({ host, port } = {}) => ({
     stats: 'errors-only',
     host, // Defaults to `localhost`
     port, // Defaults to 8080
+    hot: true,
     overlay: true,
     hotOnly: true,
+    compress: true,
   },
 });
 

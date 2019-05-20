@@ -49,6 +49,5 @@ module.exports = merge([
     ],
   }),
   loadImages(),
-  // loadImages({ include: /node_modules/ }),
   generateSourceMaps({ type: 'cheap-module-source-map' }),
 ]);

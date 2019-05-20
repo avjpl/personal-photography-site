@@ -20,4 +20,10 @@
   /**/
   --bgColor: var(--black);
   --containerBgColour: var(--gray);
+
+  --effra: effraRegular;
+  --effra-light: effraLight;
+  --clearSans: ClearSans;
+  --ClearSans-light: ClearSansLight;
+  --proximanova-light: proximanovaLight;
 }
