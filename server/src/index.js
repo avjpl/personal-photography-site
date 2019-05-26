@@ -1,18 +1,29 @@
-const { ApolloServer, gql } = require('apollo-server');
+// const path = require('path');
+const { ApolloServer } = require('apollo-server');
 const { merge } = require('lodash');
 
+require('dotenv').config();
+
 const dataSources = require('./dataSources');
+const { Query } = require('./types/query');
+const { Photos, photosResolvers } = require('./types/photos');
+const { Post, postResolvers } = require('./types/post');
+const { Contact, contactResolvers } = require('./types/contact')
 
-const { Query } = require('./types/query.js');
-const { Photos, photosResolvers } = require('./types/photos.js');
-const { Post, postResolvers } = require('./types/post.js');
+const db = require('./db/atlas');
 
-const server = new ApolloServer({
-  typeDefs: [Query, Photos, Post],
-  resolvers: [merge(photosResolvers, postResolvers)],
-  dataSources
-});
+db.connect().then(conn => {
+  // console.log('( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( (');
+  // console.log(conn);
+  // console.log('( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( (');
 
-server.listen().then(({ url }) => {
-  console.log(`Endpoint at ${url}`);
+  const server = new ApolloServer({
+    typeDefs: [Query, Photos, Post, Contact],
+    resolvers: [merge(photosResolvers, postResolvers, contactResolvers)],
+    dataSources: dataSources(conn),
+  });
+
+  server.listen().then(({ url }) => {
+    console.log(`Endpoint at ${url}`);
+  });
 });
