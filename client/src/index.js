@@ -1,16 +1,33 @@
+import '@babel/polyfill';
 import React from 'react';
 import { render } from 'react-dom';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
 import App from './App';
 
 import '../web/css/index.css';
 
-render(<App />, document.getElementById('main'));
+const client = new ApolloClient({
+  uri: 'http://localhost:4000',
+});
+
+render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('main')
+);
 
 if (module.hot) {
   module.hot.accept('./App', () => {
     const App = require('./App').default;
 
-    render(<App />, document.getElementById('main'));
+    render(
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>,
+      document.getElementById('main')
+    );
   });
 }

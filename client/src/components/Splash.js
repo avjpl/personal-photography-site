@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "@reach/router";
 
 import styles from './Splash.css';
 
 const Splash = () => (
   <>
     <section className={styles.section}>
-      <Link className={styles.logo} to="/home">
+      <Link className={styles.logo} to="home">
         <h1 >Avjpl Photography</h1>
       </Link>
 

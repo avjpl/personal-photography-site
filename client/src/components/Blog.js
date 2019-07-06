@@ -1,7 +1,7 @@
 import React from 'react';
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
-import { Link } from 'react-router-dom';
+import { Link } from "@reach/router";
 
 import Screen from './Screen';
 
@@ -39,9 +39,9 @@ const Post = ({ slug, title, img, id, date, category, shortDesc }) => {
           <h1>{title}</h1>
         </hgroup>
 
-        <date>{date}</date>
+        <time>{date}</time>
         <p>{shortDesc}</p>
-        <Link to={`/post/${slug}`} className={styles.post__read_more}>Read more</Link>
+        <Link to={`post/${slug}`} className={styles.post__read_more}>Read more</Link>
       </div>
     </section>
   );
@@ -55,8 +55,6 @@ export default () => (
           ({ loading, error, data: { getAllPost } }) => {
             if (loading) return <p>Loading...</p>;
             if (error) return <p>Error :(</p>;
-
-            {/* console.log(getAllPost); */}
 
             return (
               getAllPost.map((post, id) => <Post key={id} {...post} />)

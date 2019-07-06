@@ -13,5 +13,5 @@ module.exports = ({
       data.find(post => post.id === id),
     getPostBySlug: ({ slug }) =>
       data.find(post => post.slug === slug),
-  }
+  },
 });

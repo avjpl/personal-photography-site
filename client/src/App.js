@@ -1,24 +1,24 @@
-import '@babel/polyfill';
 import React from 'react';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { renderRoutes } from 'react-router-config';
 
-import { routes } from './routes/syncRoutes';
+import { Router } from "@reach/router";
+
+// import Splash from './components/Splash';
+import Home from './components/Home';
+import Gallery from './components/Gallery';
+import Blog from './components/Blog';
+import Post from './components/Post';
+import Contact from './components/Contact';
 
 import './app.css';
 
-const client = new ApolloClient({
-  uri: 'http://localhost:4000',
-});
-
 const App = () => (
-  <ApolloProvider client={client}>
-    <Router>
-      {renderRoutes(routes)}
-    </Router>
-  </ApolloProvider>
+  <Router className={'app'}>
+    <Home path='/' />
+    <Gallery path='gallery' />
+    <Blog path='blog' />
+    <Post path='blog/post/:slug' />
+    <Contact path='contact' />
+  </Router>
 );
 
 export default App;

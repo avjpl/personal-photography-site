@@ -37,7 +37,7 @@ const resolvers = {
     description: 'Convert unix timestamp to a date',
     serialize(value) {
       const millisecond = value * 1000;
-      return moment(new Date(millisecond)).format('MMM d, YYYY');
+      return moment(new Date(millisecond)).format('MMM Do, YYYY');
     },
   }),
 };

@@ -29,10 +29,13 @@ module.exports = merge([
         loader: 'css-loader',
         options: {
           importLoaders: 1,
-          modules: true,
-          localIdentName: '[name]__[local]--[hash:base64:5]',
-          camelCase: 'dashesOnly',
           sourceMap: true,
+          modules: {
+            localIdentName: '[name]__[local]--[hash:base64:5]',
+            hashPrefix: 'hash',
+
+          },
+          localsConvention: 'camelCase'
         },
       },
       'postcss-loader',

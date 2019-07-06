@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
-import { Link } from 'react-router-dom';
 
 import Screen from './Screen';
 
@@ -18,25 +17,30 @@ const GET_POST_BY_SLUG = gql`
   }
 `;
 
-const Post = ({ match: { params: { slug } } }) => {
+const Post = ({ slug }) => {
   return (
     <Screen>
-      <section>
-        <Query query={GET_POST_BY_SLUG} variables={{ slug }}>
-          {
-            ({ loading, error, data: { getPostBySlug } }) => {
-              if (loading) return <p>Loading...</p>;
-              if (error) return <p>Error :(</p>;
+      <Query query={GET_POST_BY_SLUG} variables={{ slug }}>
+        {
+          ({ loading, error, data: { getPostBySlug } }) => {
+            if (loading) return <p>Loading...</p>;
+            if (error) return <p>Error :(</p>;
 
-              console.log(getPostBySlug);
+            const {
+              description, category, date
+            } = getPostBySlug;
+            {/* console.log(getPostBySlug); */}
 
-              return (
-                <p>{slug}</p>
-              );
-            }
+            return (
+              <div className={styles.post}>
+                <section>
+                  <div dangerouslySetInnerHTML={{__html: description}} />
+                </section>
+              </div>
+            );
           }
-        </Query>
-      </section>
+        }
+      </Query>
     </Screen>
   );
 }

@@ -1,14 +1,16 @@
 import React from 'React';
-import { Link } from 'react-router-dom';
+import { Link } from "@reach/router";
+
+import styles from './screen.css';
 
 const Screen = ({ children }) => (
   <>
     <header>
-      <span>Avjpl</span>
+      <span>AVJPL Photogrpahy</span>
       <nav>
         <ul>
           <li>
-            <Link to='/home'>Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li>
             <Link to='/gallery'>Gallery</Link>
@@ -23,16 +25,24 @@ const Screen = ({ children }) => (
       </nav>
     </header>
 
-    <main>{ children }</main>
+    <main>
+      <div className={styles.screen}>
+        { children }
+      </div>
+    </main>
 
     <footer>
       <nav>
         <ul>
-          <li>Facebook</li>
-          <li>Twitter</li>
-          <li>Instagram</li>
-          <li>500px</li>
-          <li>Flickr</li>
+          <li>
+            <a href="https://www.instagram.com/avjpl">Instagram</a>
+          </li>
+          <li>
+            <a href="https://500px.com/avjpl">500px</a>
+          </li>
+          <li>
+            <a href=" https://www.flickr.com/photos/avjpl">Flickr</a>
+          </li>
         </ul>
       </nav>
 

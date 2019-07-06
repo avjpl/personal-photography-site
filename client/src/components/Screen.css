@@ -1,0 +1,6 @@
+.screen {
+  grid-column: 1 / -1;
+  width: 94%;
+  margin: 0 auto;
+  background: #131313;
+}
