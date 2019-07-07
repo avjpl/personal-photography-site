@@ -1,6 +1,6 @@
 .img {
   background-color: #131313;
-  height: 1020px;
+  height: 100%;
   position: relative;
   object-fit: cover;
 }
