@@ -23,12 +23,15 @@ const GET_ALL_POSTS = gql`
 
 const Post = ({ slug, title, img, id, date, category, shortDesc }) => {
   const imgPlacement = id % 2 !== 0 
-    ? styles.post__imgLeft
-    : styles.post__imgRight;
+    ? styles.postImgLeft
+    : styles.postImgRight;
 
   const detailspPlacement = id % 2 !== 0 
-    ? styles.post__detailsRight
-    : styles.post__detailsLeft;
+    ? styles.postDetailsRight
+    : styles.postDetailsLeft;
+
+  console.log({ imgPlacement });
+  console.log({ detailspPlacement });
 
   return (
     <section className={styles.post}>

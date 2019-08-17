@@ -22,7 +22,6 @@
     "main main main"
     "footer footer footer";
   grid-template-rows: 50px 1fr 50px;
-  /* grid-gap: var(--spacer20); */
   background: var(--black);
   color: var(--white);
 }
@@ -62,7 +61,6 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  /* grid-auto-rows: minmax(min-content, max-content); */
   grid-gap: var(--spacer);
 
   padding: 0 var(--spacer);

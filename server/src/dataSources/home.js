@@ -12,8 +12,6 @@ module.exports = ({
 
       const cloned = {...data[num - 1]};
 
-      console.log(cloned);
-
       cloned.img = `${homeBase}/${cloned.img}`;
 
       return cloned;

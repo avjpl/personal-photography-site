@@ -14,26 +14,21 @@ export const routes = [
   {
     component: Home,
     path: '/home',
-    // exact: true,
   },
   {
     component: Gallery,
     path: '/gallery',
-    // exact: true,
   },
   {
     component: Blog,
     path: '/blog',
-    // exact: true,
   },
   {
     component: Post,
     path: '/post/:slug',
-    // exact: true,
   },
   {
     component: ContactMe,
     path: '/contact',
-    // exact: true,
   }
 ];

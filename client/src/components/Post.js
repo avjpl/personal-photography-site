@@ -29,7 +29,6 @@ const Post = ({ slug }) => {
             const {
               description, category, date
             } = getPostBySlug;
-            {/* console.log(getPostBySlug); */}
 
             return (
               <div className={styles.post}>
