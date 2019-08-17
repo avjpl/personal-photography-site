@@ -9,11 +9,11 @@
     "start:ci": "node src/index.js"
   },
   "dependencies": {
-    "apollo-server": "^2.5.0",
+    "apollo-server": "^2.8.1",
     "dotenv": "^8.0.0",
     "exif": "^0.6.0",
-    "graphql": "^14.3.0",
-    "lodash": "^4.17.11",
-    "mongodb": "^3.2.6"
+    "graphql": "^14.4.2",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.3.0"
   }
 }
